@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 16.0),
                         child: Column(
-                          centerAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
                               '${settingsProv.convertTemp(weatherProv.weather!.temperature).toStringAsFixed(1)}${settingsProv.unitString}',

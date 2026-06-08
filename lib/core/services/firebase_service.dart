@@ -1,23 +1,20 @@
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 
 class FirebaseService {
-  final FirebaseAnalytics _analytics = FirebaseAnalytics.instance;
-
+  // Puste metody, które nie wywołają błędów kompilacji ani awarii przy braku Firebase
   Future<void> logViewWeather(String cityName) async {
-    await _analytics.logEvent(name: 'view_weather', parameters: {'city': cityName});
+    debugPrint('Firebase mock: Wyświetlono pogodę dla $cityName');
   }
 
   Future<void> logViewForecast(String cityName) async {
-    await _analytics.logEvent(name: 'view_forecast', parameters: {'city': cityName});
+    debugPrint('Firebase mock: Wyświetlono prognozę dla $cityName');
   }
 
   Future<void> logAddFavorite(String cityName) async {
-    await _analytics.logEvent(name: 'add_favorite_city', parameters: {'city': cityName});
+    debugPrint('Firebase mock: Dodano do ulubionych: $cityName');
   }
 
   void logCrash(dynamic exception, StackTrace stack) {
-    FirebaseCrashlytics.instance.recordError(exception, stack, fatal: true);
+    debugPrint('Firebase mock zrzut błędu: $exception');
   }
 }

@@ -18,7 +18,11 @@ class WeatherErrorWidget extends StatelessWidget {
             const SizedBox(height: 16),
             Text(message, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodyMedium),
             const SizedBox(height: 16),
-            ElevatedButton.icon(onPressed: onRetry, icon: const Icon(Icons.refresh), label: const String.fromEnvironment('retry', defaultValue: 'Retry')),
+            ElevatedButton.icon(
+              onPressed: onRetry,
+              icon: const Icon(Icons.refresh),
+              label: const Text('Retry'),
+            ),
           ],
         ),
       ),

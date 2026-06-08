@@ -1,5 +1,5 @@
 import 'package:weather_app/core/errors/failures.dart';
-import 'package:weather_app/data/datasources/remote_data_source.dart';
+import 'package:weather_app/data/datasources/weather_remote_data_source.dart';
 import 'package:weather_app/data/datasources/weather_local_data_source.dart';
 import 'package:weather_app/data/models/city_model.dart';
 import 'package:weather_app/data/models/weather_model.dart';

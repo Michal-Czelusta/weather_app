@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 
 import 'core/network/dio_client.dart';
 import 'core/services/firebase_service.dart';
-import 'data/datasources/remote_data_source.dart';
+import 'data/datasources/weather_remote_data_source.dart';
 import 'data/datasources/weather_local_data_source.dart';
 import 'data/models/city_model.dart';
 import 'data/repositories/weather_repository_impl.dart';
@@ -21,8 +21,8 @@ void main() async {
     WidgetsFlutterBinding.ensureInitialized();
 
     // Firebase Initialization
-    await Firebase.initializeApp();
-    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+    // await Firebase.initializeApp();
+    // FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
 
     // Local Storage System
     await Hive.initFlutter();
